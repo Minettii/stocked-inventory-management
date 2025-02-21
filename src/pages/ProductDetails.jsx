@@ -1,3 +1,3 @@
-export default function ProductDetails() {
+export default function ProductDetails({ param }) {
 	return <></>;
 }
