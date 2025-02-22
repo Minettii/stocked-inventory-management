@@ -13,32 +13,30 @@ const router = createBrowserRouter([
 		path: "/",
 		element: <RootLayout />,
 		children: [
-			[
-				{
-					index: true,
-					element: <Home />,
-				},
-				{
-					path: "products",
-					element: <Products />,
-				},
-				{
-					path: "products/:productId",
-					element: <ProductDetails />,
-					loader: productLoader,
-					errorElement: <ProductBoundary />,
-				},
-				{
-					path: "product-edit/:productId",
-					element: <ProductEdit />,
-					loader: productLoader,
-					errorElement: <ProductBoundary />,
-				},
-				{
-					path: "product-create",
-					element: <ProductCreate />,
-				},
-			],
+			{
+				index: true,
+				element: <Home />,
+			},
+			{
+				path: "products",
+				element: <Products />,
+			},
+			{
+				path: "products/:productId",
+				element: <ProductDetails />,
+				loader: productLoader,
+				errorElement: <ProductBoundary />,
+			},
+			{
+				path: "product-edit/:productId",
+				element: <ProductEdit />,
+				loader: productLoader,
+				errorElement: <ProductBoundary />,
+			},
+			{
+				path: "product-create",
+				element: <ProductCreate />,
+			},
 		],
 	},
 ]);
