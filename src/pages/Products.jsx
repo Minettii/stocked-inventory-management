@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext } from "react";
+import ProductsContext from "../contexts/ProductsContext";
 
 export default function Products() {
 	const [products, setProducts] = useState([
@@ -42,7 +43,10 @@ export default function Products() {
 									>
 										Update
 									</Link>
-									<button className="btn btn-danger btn-sm ms-2">
+									<button
+										className="btn btn-danger btn-sm ms-2"
+										onClick={() => deleteProduct(product.id)}
+									>
 										Delete
 									</button>
 								</td>
